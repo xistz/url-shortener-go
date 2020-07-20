@@ -7,3 +7,9 @@ services:
       target: development
     volumes:
       - .:/app
+    command: go run src/main.go
+    tty: true
+    environment:
+      PORT: 8080
+    ports:
+      - 8080:8080
